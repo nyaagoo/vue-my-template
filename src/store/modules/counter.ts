@@ -15,21 +15,21 @@ class Counter extends VuexModule {
   decrementCounter: number = 1000;
   // mutation
   @Mutation // counter
-  public SET_INCREMENT_COUNTER(num: number) {
+  public setIncrementCounter(num: number) {
     this.incrementCounter = num;
   }
   @Mutation
-  public SET_DECREMENT_COUNTER(num: number) {
+  public setDecrementCounter(num: number) {
     this.decrementCounter = num;
   }
 
   @Action({})
   public increment100() {
-    this.SET_INCREMENT_COUNTER(this.incrementCounter + 100);
+    this.setIncrementCounter(this.incrementCounter + 100);
   }
   @Action({})
   public decrement100() {
-    this.SET_DECREMENT_COUNTER(this.decrementCounter - 100);
+    this.setDecrementCounter(this.decrementCounter - 100);
   }
   @MutationAction({ mutate: ["incrementCounter", "decrementCounter"] })
   async resetCounter() {

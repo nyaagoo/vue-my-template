@@ -1,15 +1,15 @@
 <template lang="pug">
   .about
     h1 This is an about page
-    button(v-on:click="incrementStoreCounter()") Add 100
+    button(@click="incrementStoreCounter()") Add 100
     p {{storeCounter}}
-    button(v-on:click="incrementStoreCounter1()") Add 100
+    button(@click="incrementStoreCounter1()") Add 100
     p {{storeCounter1}}
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { counter, counter1 } from "@/store/index.ts";
+import { counter, counter1 } from "@/store/index";
 
 @Component
 export default class HelloWorld extends Vue {
