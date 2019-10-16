@@ -155,6 +155,12 @@ npm run serve
 npm run build
 ```
 
+### Generate report.html to help analyze bundle content
+
+```
+npm run report
+```
+
 ### Run your tests
 
 ```
